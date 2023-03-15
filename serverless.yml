@@ -1,0 +1,18 @@
+service: my-app
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+functions:
+  graphql:
+    handler: server.graphqlHandler
+    environment:
+      MONGODB_URI: 'mongodb+srv://mdrabiulhasan:zWuaHSpsq4MjFHkc@nodejslearning.yr5egud.mongodb.net'
+      MONGODB_DBNAME: 'aws_graphql'
+    events:
+      - http:
+          path: /graphql
+          method: post
+          cors: true

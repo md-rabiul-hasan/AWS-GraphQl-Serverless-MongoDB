@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "168dd63c-2bd7-4a28-ab1a-21ae35f8f4cb",
+		"name": "AWS GraphpQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20976276"
+	},
+	"item": [
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  createTodo(title: \"Hello Dev\", description: \"Practice building Serverless yy\") {\r\n    id\r\n    title\r\n    description\r\n  }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://8t5csbt2ed.execute-api.us-east-1.amazonaws.com/dev/graphql",
+							"protocol": "https",
+							"host": [
+								"8t5csbt2ed",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  todos {\r\n    title\r\n    description\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://8t5csbt2ed.execute-api.us-east-1.amazonaws.com/dev/graphql",
+							"protocol": "https",
+							"host": [
+								"8t5csbt2ed",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  todoById(id: \"641013ee062d3a36ccb21259\") {\r\n    id\r\n    title\r\n    description\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://8t5csbt2ed.execute-api.us-east-1.amazonaws.com/dev/graphql",
+							"protocol": "https",
+							"host": [
+								"8t5csbt2ed",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  updateTodo(id: \"641014c2e7362e6f7de5eecd\", title: \"Learn Serverless Framework\", description: \"Practice building Serverless applications using Serverless Framework\") {\r\n    id\r\n    title\r\n    description\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://8t5csbt2ed.execute-api.us-east-1.amazonaws.com/dev/graphql",
+							"protocol": "https",
+							"host": [
+								"8t5csbt2ed",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  deleteTodo(id: \"641012861ce49b69ff5a91c8\")\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://8t5csbt2ed.execute-api.us-east-1.amazonaws.com/dev/graphql",
+							"protocol": "https",
+							"host": [
+								"8t5csbt2ed",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
